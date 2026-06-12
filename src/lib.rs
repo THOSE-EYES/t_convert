@@ -32,7 +32,7 @@ impl Temperature {
     }
 
     /// To get the value from a result variable holding the converted unit, use this method!
-    pub fn get_value(&self) -> f64 {
+    pub const fn get_value(&self) -> f64 {
         self.value
     }
 
@@ -53,7 +53,7 @@ impl Temperature {
     /// };
     ///
     /// ```
-    pub fn to_celsius(&self) -> Option<Self> {
+    pub const fn to_celsius(&self) -> Option<Self> {
         let celsius = match self.unit {
             Unit::Celsius => self.value,
 
@@ -82,7 +82,7 @@ impl Temperature {
     /// };
     ///
     /// ```
-    pub fn to_fahrenheit(&self) -> Option<Self> {
+    pub const fn to_fahrenheit(&self) -> Option<Self> {
         let fahrenheit = match self.unit {
             Unit::Fahrenheit => self.value,
 
@@ -111,7 +111,7 @@ impl Temperature {
     /// };
     ///
     /// ```
-    pub fn to_kelvin(&self) -> Option<Self> {
+    pub const fn to_kelvin(&self) -> Option<Self> {
         let kelvin = match self.unit {
             Unit::Kelvin => self.value,
 
