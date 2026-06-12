@@ -17,7 +17,7 @@ pub struct Temperature {
 
 /// An implementation of the temperature struct.
 impl Temperature {
-    pub fn new(value:f64, unit: Unit) -> Option<Self> {
+    pub const fn new(value:f64, unit: Unit) -> Option<Self> {
         let valid_temp = match unit {
             Unit::Celsius => value >= -273.15,
             Unit::Fahrenheit => value >= -459.67,
