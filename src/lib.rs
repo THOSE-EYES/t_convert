@@ -1,3 +1,5 @@
+#![no_std]
+
 /// Create enum 'Unit' holding the temperature units.
 #[derive(Debug, PartialEq)]
 pub enum Unit {
